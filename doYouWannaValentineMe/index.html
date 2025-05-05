@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você me ama?</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
+    <canvas id="confetti-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:999;pointer-events:none;"></canvas>
+</head>
+<body>
+    <div class="container">
+        
+        <h1>Você me ama?</h1>
+        <div class="gif-container">
+            <img alt="cute gif" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGltemwyaDh6ajM0eHJramljZ3R0ZjExamVsejd6Y2x0ejZqNzM2cyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/UkfUod3TFW66J2BWKK/giphy.gif">
+        </div>
+        <div class="buttons">
+            <button class="blob-btn btn-sim">
+              Sim
+              <span class="blob-btn__inner">
+                <span class="blob-btn__blobs">
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                </span>
+              </span>
+            </button>
+          
+            <button class="blob-btn btn-nao">
+              Não
+              <span class="blob-btn__inner">
+                <span class="blob-btn__blobs">
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                </span>
+              </span>
+            </button>
+          </div>
+          
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none;">
+            <defs>
+              <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+                <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+              </filter>
+            </defs>
+          </svg>
+          <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTlvZ3JxcHBmbW5mbTZsdXBvdmM4YTM4b3M0NzV6bHI1Y2ZrNmg0diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2qs86TQ4O4MxfXSZBg/giphy.gif" 
+     alt="Celebração" 
+     class="hidden-image">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
